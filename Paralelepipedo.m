@@ -1,4 +1,4 @@
-function paralel = Paralelepipedo(largura, altura, prof, origem)
+function paralel = Paralelepipedo(largura, prof, altura, origem)
   l = largura/2;
   a = altura/2;
   p = prof/2;
