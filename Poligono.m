@@ -42,12 +42,12 @@ classdef Poligono < handle
     end
 
     function p = Rotacao(p, eixo, angulo)
-      if eixo == 'x'
-        T = [cos(angulo) -sin(angulo) 0 0; sin(angulo) cos(angulo) 0 0; 0 0 1 0; 0 0 0 1];
+      if eixo == 'z'
+        T = [cosd(angulo) -sind(angulo) 0 0; sind(angulo) cosd(angulo) 0 0; 0 0 1 0; 0 0 0 1];
       else if eixo == 'y'
-        T = [cos(angulo) 0 -sin(angulo) 0; 0 1 0 0; sin(angulo) 0 cos(angulo) 0; 0 0 0 1];
-      else if eixo == 'z'
-        T = [1 0 0 0; 0 cos(angulo) -sin(angulo) 0; 0 sin(angulo) cos(angulo) 0; 0 0 0 1];
+        T = [cosd(angulo) 0 -sind(angulo) 0; 0 1 0 0; sind(angulo) 0 cosd(angulo) 0; 0 0 0 1];
+      else if eixo == 'x'
+        T = [1 0 0 0; 0 cosd(angulo) -sind(angulo) 0; 0 sind(angulo) cosd(angulo) 0; 0 0 0 1];
       end
       end
       end
