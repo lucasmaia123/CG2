@@ -4,7 +4,7 @@ function world = proj_mundo(alfa, ratio, world)
         world(i).render = false;
         origem = world(i).origem_proj;
         %Checa se o objeto está no eixo z da camera
-        if origem(3) < -d && origem(3) > -10
+        if origem(3) < -d && origem(3) > -20
             %Checa se o objeto está no eixo y da camera
             if origem(2) <= -origem(3)/d && origem(2) >= origem(3)/d
                 %Checa se o objeto está no eixo x da camera
