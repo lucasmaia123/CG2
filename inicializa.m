@@ -58,7 +58,7 @@ while true
         case 2
             clc
             for i = 1:length(world)
-                disp([num2str(i) ' - tipo: ' world(i).tipo ', origem: ' num2str(world(i).origem(:)).'])
+                disp([num2str(i) ' - tipo: ' world(i).tipo ', origem: ' num2str(world(i).origem(:)')])
             end
             y = input("Digite o indice do poligono a ser transformado\nDigite 0 para transformar todos os poligonos: ");
             sprintf("1 - Escala\n2 - Translação\n3 - Rotação\n4 - Voltar\n")
