@@ -1,4 +1,4 @@
-function world = add_object(objeto, world)
+function world = add_object(objeto, world) % Adiciona um objeto ao mundo
   if isempty(world)
     world = objeto;
   else
