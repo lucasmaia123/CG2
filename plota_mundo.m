@@ -1,4 +1,4 @@
-function plota_mundo(world, d)
+function plota_mundo(world, d) % Plota os objetos com a camera padrão do matlab
   for i = 1:length(world)
     plota_arestas3d(world(i).vertices, world(i).arestas)
   end
