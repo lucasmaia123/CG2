@@ -1,4 +1,4 @@
-function plota_mundo_proj(world, tipo)
+function plota_mundo_proj(world, tipo) % Plota os objetos projetados pela nossa camera
     if tipo == 3
         for i = 1:length(world)
             plota_arestas3d(world(i).v_proj, world(i).arestas)
