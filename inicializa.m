@@ -1,4 +1,4 @@
-world = [];
+world = []; % Lista de objetos que compoem o mundo
 
 while true
     clc
@@ -14,7 +14,7 @@ while true
                     base = input("Digite a base do cubo: ");
                     origem = input("Digite as coordenadas do cubo: ");
                     if length(origem) == 3
-                        origem = [origem 1];
+                        origem = [origem 1]; % Expande para coordenadas homogêneas
                     end
                     world = add_object(Cubo(base, origem), world);
                 case 2
@@ -98,16 +98,16 @@ while true
         case 3
             eye = input("Digite as coordenadas da câmera([x, y(profundidade), z(altura)]: ");
             at = input("Digite as coordenadas do ponto em que a câmera está apontada: ");
-            world = camera_view(eye, at, world);
+            world = camera_view(eye, at, world); % Gera a câmera sem perspectiva
             plota_mundo_proj(world, 3);
         case 4
             eye = input("Digite as coordenadas da câmera([x, y(profundidade), z(altura)]: ");
             at = input("Digite as coordenadas do ponto em que a câmera está apontada: ");
             world = camera_view(eye, at, world);
-            world = proj_mundo(90, 1, world);
+            world = proj_mundo(90, 1, world); % Gera a câmera com perspectiva e faz projeção em 2D
             plota_mundo_proj(world, 2);
         case 5
-            plota_mundo(world, 10);
+            plota_mundo(world, 10); % Plota o mundo sem alterar a câmera padrão
         case 6
             world = [];
             input("Mundo resetado!");
