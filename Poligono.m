@@ -27,7 +27,7 @@ classdef Poligono < handle
       [x, y, z] = p.move_to_center();
       p.vertices = T*p.vertices;
       p.v_proj = T*p.v_proj;
-      p.Translacao([x, y, z];
+      p.Translacao([x, y, z]);
     end
 
     % Transformação de translação
