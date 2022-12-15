@@ -1,4 +1,5 @@
 function cilindro = Cilindro(raio, altura, passos, origem)
+  % Gera o cilindro como uma concatenação de retangulos
   passo = 2*pi/passos;
   angulo = 0;
   cilindro = [];
